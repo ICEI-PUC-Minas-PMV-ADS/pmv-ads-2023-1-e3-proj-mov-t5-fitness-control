@@ -1,46 +1,36 @@
 # Introdução
 
-Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
+A procura por novas formas de lidar com a rotina e sua otimização, vem trazendo necessidades antes não pontuadas. Principalmente no que diz respeito à organização de treino e dieta de forma eficiente. As planilhas e fichas físicas não são as formas mais adequadas atualmente para a programação que os usuários necessitam ao ingressar numa academia ou frequentar um nutricionista.
+	
+Uma agenda organizada e previsível de treino e dieta podem salvar minutos valiosos aos usuários e se estiver a dois cliques de distância é ainda mais conveniente. Tendo este horizonte, o presente trabalho tem por premissa cortar este caminho, propondo uma aplicação que abraça as esferas da nutrição e do treino.
+
+O trabalho que será desenvolvido será composto de módulos de controle e registro de treino e dieta, separados entre si e controlados por um calendário. Onde o usuário terá num mesmo ambiente o que o personal e o que o nutricionista passou de forma eficiente, além de possuir uma dinamicidade exigida nos tempos atuais.
+
+O sistema possuirá uma home com o dia da semana para que o usuário possa se orientar, flags que marcaram o treino e dieta feitos no dia, calendários de acompanhamento e abas específicas para a gestão dos planejamentos passados por profissionais da saúde. Assim, o projeto busca contemplar as vantagens descritas anteriormente e também sanar o problema da falta de eficiência dos modelos analógicos ou planilhas utilizados anteriormente.
 
 ## Problema
-Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
+A falta de tempo e falta de motivação são os principais motivos que levam as pessoas a cuidarem menos da saúde. Rotinas intermitentes dificultam a inclusão de exercícios e uma alimentação saudável na sua rotina. Manter uma rotina de exercícios e alimentação saudável se torna difícil para muitas pessoas.
 
-Descreva também o contexto em que essa aplicação será usada, se  houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de  fato existir, pois ainda não é a hora de apresentar requisitos  detalhados ou projetos.
-
-Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thinking, que permite um olhar de ponta a ponta para o problema.
-
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+Existe a necessidade de otimização de tempo para que as pessoas cuidem mais da saúde, bem como uma forma de acompanhar e centralizar as informações necessárias para ter uma rotina correta de exercícios e de alimentação e de registro de suas atividades.
 
 ## Objetivos
 
-Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+Desenvolver um aplicativo de gerenciamento de treino, dieta e registro de ganho/peso.
 
-Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
- 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+*OBJETIVOS ESPECÍFICOS*
+* Promover o gerenciamento de treino, o aplicativo permite que os usuários acompanhem sua rotina de treinos definida e registre os dias treinados.
+* Promover o gerenciamento de dieta, o aplicativo permite que os usuários acompanhem sua dieta definida.
+* Deverá ser fácil e conveniente de usar: o aplicativo deve ser fácil de usar e acessível, independentemente do nível de experiência ou habilidade tecnológica do usuário. Ele deve ser conveniente para o uso em casa ou em viagens, e disponível em várias plataformas.
 
 ## Justificativa
 
-Descreva a importância ou a motivação para trabalhar com esta aplicação que você escolheu. Indique as razões pelas quais você escolheu seus objetivos específicos ou as razões para aprofundar em certos aspectos do software.
+O desenvolvimento desse aplicativo fitness está relacionado ao fato de que a maioria das pessoas enfrenta desafios para cuidar da sua saúde e bem-estar devido à rotina sistemática, controle sobre exercícios e nutrição adequada, além da falta de motivação.
 
-O grupo de trabalho pode fazer uso de questionários, entrevistas e dados estatísticos, que podem ser apresentados, com o objetivo de esclarecer detalhes do problema que será abordado pelo grupo.
+O aplicativo oferece uma solução para um melhor controle de sua dieta e sua rotina de exercícios. Além disso, o aplicativo pode ser usado por qualquer pessoa, independentemente do seu nível de condicionamento físico ou experiência em exercícios.
 
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+Com a utilização do aplicativo, os usuários podem melhorar a sua saúde, aumentar a sua disposição e energia, e até mesmo melhorar a sua autoestima. Em resumo, o aplicativo oferece uma ferramenta eficaz e acessível para que as pessoas possam cuidar das mesmas e melhorar a qualidade de vida de forma prática e eficiente.
 
 ## Público-Alvo
 
-Descreva quem serão as pessoas que usarão a sua aplicação indicando os diferentes perfis. O objetivo aqui não é definir quem serão os clientes ou quais serão os papéis dos usuários na aplicação. A ideia é, dentro do possível, conhecer um pouco mais sobre o perfil dos usuários: conhecimentos prévios, relação com a tecnologia, relações
-hierárquicas, etc.
+Definimos como público-alvo pessoas que desejam controlar sua rotina de alimentação e de exercício que possuem dificuldade para começar e manter uma rotina. Pessoas que desejam perder peso, ganhar massa muscular, pessoas com pouco tempo e idosos.
 
-Adicione informações sobre o público-alvo por meio de uma descrição textual, diagramas de personas e mapa de stakeholders.
-
-> **Links Úteis**:
-> - [Público-alvo](https://blog.hotmart.com/pt-br/publico-alvo/)
-> - [Como definir o público alvo](https://exame.com/pme/5-dicas-essenciais-para-definir-o-publico-alvo-do-seu-negocio/)
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
