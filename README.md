@@ -1,23 +1,23 @@
-# TÍTULO DO PROJETO
+#  Fitness Control
 
-`CURSO`
+`Análise e Desenvolvimento de Sistemas`
 
-`DISCIPLINA`
+`Eixo 3 - Projeto: Desenvolvimento de uma Aplicação Móvel em um Ambiente de Negócio - Turma 05 - 2023/1`
 
-`SEMESTRE`
+`Terceiro semestre`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+A nossa aplicação será composta de módulos de controle e registro de treino e dieta, separados entre si e controlados por um calendário. Onde o usuário terá num mesmo ambiente o que o personal e o que o nutricionista passou de forma eficiente, além de possuir uma dinamicidade exigida nos tempos atuais..
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
+* Carlos Eduardo Pereira Marques
+* Gabriel José Puddo Cardoso
+* Guilherme de Oliveira Costa
+* João Victor Lessa Henrique
 
 ## Orientador
 
-* Nome completo do professor 1
+* Diego Silva Caldeira Rocha
 
 ## Instruções de utilização
 
@@ -48,3 +48,4 @@ Assim que a primeira versão do sistema estiver disponível, deverá complementa
 # Apresentação
 
 <li><a href="presentation/README.md"> Apresentação da solução</a></li>
+
