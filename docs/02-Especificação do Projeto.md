@@ -1,26 +1,24 @@
 # Especificações do Projeto
 
-<span style="color:red">Pré-requisitos: <a href="1-Documentação de Contexto.md"> Documentação de Contexto</a></span>
-
-Definição do problema e ideia de solução a partir da perspectiva do usuário. É composta pela definição do  diagrama de personas, histórias de usuários, requisitos funcionais e não funcionais além das restrições do projeto.
-
-Apresente uma visão geral do que será abordado nesta parte do documento, enumerando as técnicas e/ou ferramentas utilizadas para realizar a especificações do projeto
+A escolha do referido problema foi definida por meio de discussões e estudos realizados pelos membros da equipe. Os detalhes levantados nesse processo foram consolidados na forma de personas e histórias de usuários.
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em se desenvolver profissionalmente através de um mestrado fora do país, pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está buscando uma agência que o ajude a encontrar universidades na Europa que aceitem alunos estrangeiros.
-
-Enumere e detalhe as personas da sua solução. Para tanto, baseie-se tanto nos documentos disponibilizados na disciplina e/ou nos seguintes links:
-
-> **Links Úteis**:
-> - [Rock Content](https://rockcontent.com/blog/personas/)
-> - [Hotmart](https://blog.hotmart.com/pt-br/como-criar-persona-negocio/)
-> - [O que é persona?](https://resultadosdigitais.com.br/blog/persona-o-que-e/)
-> - [Persona x Público-alvo](https://flammo.com.br/blog/persona-e-publico-alvo-qual-a-diferenca/)
-> - [Mapa de Empatia](https://resultadosdigitais.com.br/blog/mapa-da-empatia/)
-> - [Mapa de Stalkeholders](https://www.racecomunicacao.com.br/blog/como-fazer-o-mapeamento-de-stakeholders/)
->
-Lembre-se que você deve ser enumerar e descrever precisamente e personalizada todos os clientes ideais que sua solução almeja.
+<div align="center">
+<img src="https://user-images.githubusercontent.com/108990294/227016935-f57150fe-a8cb-4a74-84f1-7045a2b45123.PNG"/>
+</div>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/108990294/227018376-2b8d475c-4709-45fe-9c92-206f70b60f8d.PNG"/>
+</div>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/108990294/227018665-692c17b6-f1ff-477a-84a7-e7104834c021.PNG"/>
+</div>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/108990294/227018733-0c93ddc6-36dc-4352-bfd0-8fde9e1f31e0.PNG"/>
+</div>
+<div align="center">
+<img src="https://user-images.githubusercontent.com/108990294/227018837-fd4fc4bd-e9cf-427e-956d-19f792c7fd39.PNG"/>
+</div>
 
 ## Histórias de Usuários
 
@@ -28,17 +26,12 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 |EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Pedro  | Ter acesso a uma aplicação que permita com que eu registre meus treinos e dietas           | Poder conseguir ser mais disciplinado               |
+|Julia       | Ter acesso a um calendário onde eu possa acompanhar o meu progresso na academia                 | Melhorar o meu desempenho na academia |
+|Marcos       | Registrar minha dieta semanal que foi passada pela nutricionista                 |Para que eu possa ter os macronutrientes calculados de forma prática |
+|Ana       | Preciso marcar com facilidade se conclui o treino do dia                 | Para poder registrar o meu progresso |
+|Rafael       | Preciso de uma aplicação onde eu possa registrar o treino passado pela personal                 | Para conseguir consultar durante o treino de forma eficiente |
 
-Apresente aqui as histórias de usuário que são relevantes para o projeto de sua solução. As Histórias de Usuário consistem em uma ferramenta poderosa para a compreensão e elicitação dos requisitos funcionais e não funcionais da sua aplicação. Se possível, agrupe as histórias de usuário por contexto, para facilitar consultas recorrentes à essa parte do documento.
-
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
-> - [User Stories: requisitos que humanos entendem](https://www.luiztools.com.br/post/user-stories-descricao-de-requisitos-que-humanos-entendem/)
-> - [Histórias de Usuários: mais exemplos](https://www.reqview.com/doc/user-stories-example.html)
-> - [9 Common User Story Mistakes](https://airfocus.com/blog/user-story-mistakes/)
 
 ## Modelagem do Processo de Negócio 
 
