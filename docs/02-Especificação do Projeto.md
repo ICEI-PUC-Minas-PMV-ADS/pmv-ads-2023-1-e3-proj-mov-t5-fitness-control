@@ -66,36 +66,47 @@ Obs.: todas as informações para gerar os indicadores devem estar no diagrama d
 
 ## Requisitos
 
-As tabelas que se seguem apresentam os requisitos funcionais e não funcionais que detalham o escopo do projeto. Para determinar a prioridade de requisitos, aplicar uma técnica de priorização de requisitos e detalhar como a técnica foi aplicada.
+As tabelas abaixo apresentam os requisitos funcionais e não funcionais da aplicação, definindo o escopo do projeto. Também, há as restrições e a maneira que utilizamos para determinar a prioridade das tarefas que serão realizadas.
 
 ### Requisitos Funcionais
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| A aplicação deverá possuir um formulário de cadastro para novos usuários   | ALTA | 
+|RF-002| A aplicação deverá possuir um formulário de login para autenticação e acesso dos usuários   | ALTA |
+|RF-003| A home deverá possuir um painel com horário e dia da semana em que a aplicação está sendo acessada   | MÉDIA |
+|RF-004| A home deverá possuir um botão escrito "Dieta" onde o usuário poderá marcar se ele concluiu ou não a dieta naquele dia   | MÉDIA |
+|RF-005| A home deverá possuir um botão escrito "Treino" onde o usuário poderá marcar se ele concluiu ou não o treino do dia   | MÉDIA |
+|RF-006| O botão de "Dieta" ao ser acionado deverá redirecionar o usuário para a página da dieta do dia   | MÉDIA |
+|RF-007| O botão de "Treino" ao ser acionado deverá redirecionar o usuário para a página de treino do dia   | MÉDIA |
+|RF-008| O display padrão do menu do aplicativo deverá ser no rodapé da aplicação contendo os campos "Treino", "Dieta", "Calendário" e "Usuário   | ALTA |
+|RF-009| A tela de treino deverá conter a programação dos treinos nos dias da semana   | ALTA |
+|RF-010| A ficha de treino poderá ser editada alterando os exercícios e número de séries e repetições   | ALTA |
+|RF-011| A tela de Dieta deverá conter o plano alimentar geral para que o usuário possa acompanhar sua dieta   | ALTA |
+|RF-012| Deverá ser possível cadastrar os macronutrientes como calorias do dia, quantidade de proteínas, carboidratos, quantidade de cada alimento   | MÉDIA |
+|RF-013| A tela de Calendário irá concentrar um calendário que se atualizará automaticamente de acordo com a conclusão ou não do treino e dieta marcada na home, de forma que o usuário consiga acompanhar quantos dias cumpriu o planejamento ou não   | MÉDIA |
+|RF-014| A tela de usuário deverá conter a opção de edição de perfil e sair da plataforma.   | ALTA |
 
 ### Requisitos não Funcionais
 
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-002| O sistema deverá ser desenvolvido em JavaScript | ALTA | 
+|RNF-003| O sistema irá criptografar a senha do usuário | ALTA | 
+|RNF-004| A aplicação deverá ser autoexplicativa | MÉDIA | 
+|RNF-005| Os treinos e dieta serão separados por dia da semana | ALTA | 
+|RNF-006| A dieta e o treino deverão ser exibidos em forma de lista | MÉDIA | 
+|RNF-007| A aplicação deverá ser leve para que o máximo de usuários possíveis possam utilizá-la | MÉDIA | 
 
-Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
+## Metodologia para definir prioridades dos requisitos
 
-- [Requisitos Funcionais
- (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
- correspondem a uma funcionalidade que deve estar presente na
-  plataforma (ex: cadastro de usuário).
-- [Requisitos Não Funcionais
-  (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
-  correspondem a uma característica técnica, seja de usabilidade,
-  desempenho, confiabilidade, segurança ou outro (ex: suporte a
-  dispositivos iOS e Android).
-Lembre-se que cada requisito deve corresponder à uma e somente uma
-característica alvo da sua solução. Além disso, certifique-se de que
-todos os aspectos capturados nas Histórias de Usuário foram cobertos.
+A técnica utilizada para fazer a priorização das tarefas escolhida foi a Escala de três níveis. Utilizamos os nomes Alta, Média e Baixa para nos referenciar a respeito de qual requisito funcional ou não funcional deve ser realizado primeiro.
+
+Além disso, essa técnica pode ser incrementada utilizando um quadrante que significa a importância daquele requisito, facilitando a classificação e visualização dos mesmos:
+
+![Escala](./img/escala.png)
+ 
 
 ## Restrições
 
@@ -103,64 +114,52 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|01| A aplicação deve ser construída por alunos da Turma 5 do curso de Tecnologia em Análise e Desenvolvimento de Sistemas, turno Virtual da PUCMINAS |
+|02| A data de entrega do projeto não poderá exceder a data 23/06/2023 |
+|03| A aplicação deverá estar no github, bem como sua documentação |
+|04| A aplicação não deve ter uma versão web, será apenas mobile para Apple Store ou Google Store |
+|05| A aplicação utilizará o React Native como framework do javascript |
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)
+## Matriz de rastreabilidade de requisitos:
+
+![Matriz rastreabilidade](./img/matriz-rastreabilidade.png)
+
 
 ## Diagrama de Casos de Uso
 
-O diagrama de casos de uso é o próximo passo após a elicitação de requisitos, que utiliza um modelo gráfico e uma tabela com as descrições sucintas dos casos de uso e dos atores. Ele contempla a fronteira do sistema e o detalhamento dos requisitos funcionais com a indicação dos atores, casos de uso e seus relacionamentos. 
+O diagrama ilustrado abaixo demonstra as principais ligações entre casos de uso e atores em relação aos Requisitos Funcionais do projeto.
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagrama de Casos de Uso”.
+![Diagrama de Caso de Uso](./img/diagramaCasodeUso.png)
 
-> **Links Úteis**:
-> - [Criando Casos de Uso](https://www.ibm.com/docs/pt-br/elm/6.0?topic=requirements-creating-use-cases)
-> - [Como Criar Diagrama de Caso de Uso: Tutorial Passo a Passo](https://gitmind.com/pt/fazer-diagrama-de-caso-uso.html/)
-> - [Lucidchart](https://www.lucidchart.com/)
-> - [Astah](https://astah.net/)
-> - [Diagrams](https://app.diagrams.net/)
-
-# Matriz de Rastreabilidade
-
-A matriz de rastreabilidade é uma ferramenta usada para facilitar a visualização dos relacionamento entre requisitos e outros artefatos ou objetos, permitindo a rastreabilidade entre os requisitos e os objetivos de negócio. 
-
-A matriz deve contemplar todos os elementos relevantes que fazem parte do sistema, conforme a figura meramente ilustrativa apresentada a seguir.
-
-![Exemplo de matriz de rastreabilidade](img/02-matriz-rastreabilidade.png)
-
-> **Links Úteis**:
-> - [Artigo Engenharia de Software 13 - Rastreabilidade](https://www.devmedia.com.br/artigo-engenharia-de-software-13-rastreabilidade/12822/)
-> - [Verificação da rastreabilidade de requisitos usando a integração do IBM Rational RequisitePro e do IBM ClearQuest Test Manager](https://developer.ibm.com/br/tutorials/requirementstraceabilityverificationusingrrpandcctm/)
-> - [IBM Engineering Lifecycle Optimization – Publishing](https://www.ibm.com/br-pt/products/engineering-lifecycle-optimization/publishing/)
 
 
 # Gerenciamento de Projeto
 
-De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicações, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque. É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu amplio o escopo de um projeto eu posso afetar seu cronograma e seus custos.
+De acordo com o PMBoK v6 as dez áreas que constituem os pilares para gerenciar projetos, e que caracterizam a multidisciplinaridade envolvida, são: Integração, Escopo, Cronograma (Tempo), Custos, Qualidade, Recursos, Comunicação, Riscos, Aquisições, Partes Interessadas. Para desenvolver projetos, um profissional deve se preocupar em gerenciar todas essas dez áreas. Elas se complementam e se relacionam, de tal forma que não se deve apenas examinar uma área de forma estanque.
 
-## Gerenciamento de Tempo
+É preciso considerar, por exemplo, que as áreas de Escopo, Cronograma e Custos estão muito relacionadas. Assim, se eu ampliar o escopo de um projeto eu posso afetar seu cronograma e seus custos.
 
-Com diagramas bem organizados que permitem gerenciar o tempo nos projetos, o gerente de projetos agenda e coordena tarefas dentro de um projeto para estimar o tempo necessário de conclusão.
 
-![Diagrama de rede simplificado notação francesa (método francês)](img/02-diagrama-rede-simplificado.png)
+## Gerenciamento de Cronograma
 
 O gráfico de Gantt ou diagrama de Gantt também é uma ferramenta visual utilizada para controlar e gerenciar o cronograma de atividades de um projeto. Com ele, é possível listar tudo que precisa ser feito para colocar o projeto em prática, dividir em atividades e estimar o tempo necessário para executá-las.
 
-![Gráfico de Gantt](img/02-grafico-gantt.png)
+![Diagrama de Gant 1](./img/gantt.png)
+![Diagrama de Gant 2](./img/gantt2.png)
 
-## Gerenciamento de Equipe
+## Gerenciamento de Custos
 
-O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados. 
+O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo
 
-![Simple Project Timeline](img/02-project-timeline.png)
+![Custos](./img/custos1.png)
 
-## Gestão de Orçamento
 
-O processo de determinar o orçamento do projeto é uma tarefa que depende, além dos produtos (saídas) dos processos anteriores do gerenciamento de custos, também de produtos oferecidos por outros processos de gerenciamento, como o escopo e o tempo.
+## Gerenciamento de Pessoal
 
-![Orçamento](img/02-orcamento.png)
+O gerenciamento adequado de tarefas contribuirá para que o projeto alcance altos níveis de produtividade. Por isso, é fundamental que ocorra a gestão de tarefas e de pessoas, de modo que os times envolvidos no projeto possam ser facilmente gerenciados.
+
+![Pessoal 1](./img/pessoal1.png)
+![Pessoal 2](./img/pessoal2.png)
+
