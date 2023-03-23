@@ -37,32 +37,44 @@ Com base na análise das personas forma identificadas as seguintes histórias de
 
 ### Análise da Situação Atual
 
-Apresente aqui os problemas existentes que viabilizam sua proposta. Apresente o modelo do sistema como ele funciona hoje. Caso sua proposta seja inovadora e não existam processos claramente definidos, apresente como as tarefas que o seu sistema pretende implementar são executadas atualmente, mesmo que não se utilize tecnologia computacional. 
+No mercado atual existem aplicações que auxiliam no controle das atividades físicas e de dietas. Apesar disso, muitas delas abusam de propagandas e/ou cobram assinatura de planos para acesso de funcionalidades.
 
 ### Descrição Geral da Proposta
 
-Apresente aqui uma descrição da sua proposta abordando seus limites e suas ligações com as estratégias e objetivos do negócio. Apresente aqui as oportunidades de melhorias.
+Nossa proposta se baseia em uma aplicação que auxiliará os usuários no controle de suas dietas e atividades físicas, com uma interface altamente intuitiva e simplificada, justamente para facilitar e incentivar o seu uso.
 
-### Processo 1 – NOME DO PROCESSO
+### Processo 1 – Cadastramento de Usuário
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 1. Em seguida, apresente o modelo do processo 1, descrito no padrão BPMN. 
+![Processo 1](./img/p1.png)
 
-![Processo 1](img/02-bpmn-proc1.png)
+### Processo 2 – Cadastramento de Dietas
 
-### Processo 2 – NOME DO PROCESSO
+![Processo 2](./img/p2.png)
 
-Apresente aqui o nome e as oportunidades de melhorias para o processo 2. Em seguida, apresente o modelo do processo 2, descrito no padrão BPMN.
+### Processo 3 – Cadastramento de Treinos/ Atividades Físicas
 
-![Processo 2](img/02-bpmn-proc2.png)
+![Processo 3](./img/p3.png)
+
+### Processo 4 – Visualização de Dietas
+
+![Processo 4](./img/p4.png)
+
+### Processo 5 – Visualização dos Treinos/ Atividades Físicas
+
+![Processo 5](./img/p5.png)
+
+### Processo 6 – Visualização do Calendário
+
+![Processo 6](./img/p6.png)
+
+### Processo 7 – Sinalização do Treino Realizado
+
+![Processo 7](./img/p7.png)
+
 
 ## Indicadores de Desempenho
 
-Apresente aqui os principais indicadores de desempenho e algumas metas para o processo. Atenção: as informações necessárias para gerar os indicadores devem estar contempladas no diagrama de classe. Colocar no mínimo 5 indicadores. 
-
-Usar o seguinte modelo: 
-
-![Indicadores de Desempenho](img/02-indic-desemp.png)
-Obs.: todas as informações para gerar os indicadores devem estar no diagrama de classe a ser apresentado a posteriori. 
+![Indicador de Desempenho](./img/indicadorDesempenho.png)
 
 ## Requisitos
 
