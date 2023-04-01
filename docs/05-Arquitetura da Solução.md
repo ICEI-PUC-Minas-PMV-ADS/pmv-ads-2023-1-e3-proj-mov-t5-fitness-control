@@ -48,6 +48,7 @@ O modelo físico do projeto encontra-se em um arquivo banco.sql hospedado dentro
 |REACT NATIVE ASYNC STORAGE|
 |REACT NATIVE VECTOR ICON|
 |REACT NAVIGATION|
+|AXIOS|
 
 |**IDE**|
 |:---------:|
