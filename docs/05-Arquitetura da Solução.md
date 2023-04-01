@@ -71,4 +71,7 @@ O back-end da aplicação ficará hospedado na plataforma [Heroku](https://www.h
 
 ## Qualidade de Software
 
+A qualidade do software é um aspecto fundamental para garantir que um software atenda às necessidades e expectativas dos usuários, bem como para garantir que ele seja seguro, confiável e escalável. Existem diversas práticas e metodologias que podem ser adotadas para garantir a qualidade do software. na nossa aplicaçao utilizamos os segintes aspectos:
+
+![Qualidade de software](https://user-images.githubusercontent.com/108990294/229319489-98c450f6-6111-429d-96cb-8119252b91ed.PNG)
 
