@@ -1,36 +1,96 @@
 
 # Projeto de Interface
 
-<span style="color:red">Pré-requisitos: <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a></span>
-
 Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
 
- Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="2-Especificação do Projeto.md"> Documentação de Especificação</a>.
 
 ## Diagrama de Fluxo
 
-O diagrama apresenta o estudo do fluxo de interação do usuário com o sistema interativo e  muitas vezes sem a necessidade do desenho do design das telas da interface. Isso permite que o design das interações seja bem planejado e gere impacto na qualidade no design do wireframe interativo que será desenvolvido logo em seguida.
+Construímos o diagrama de fluxo de interação do usuário com o sistema, permitindo que o design das interações seja bem planejado e gere impacto na qualidade do design dos wireframes.
 
-O diagrama de fluxo pode ser desenvolvido com “boxes” que possuem internamente a indicação dos principais elementos de interface - tais como menus e acessos - e funcionalidades, tais como editar, pesquisar, filtrar, configurar - e a conexão entre esses boxes a partir do processo de interação. Você pode ver mais explicações e exemplos https://www.lucidchart.com/blog/how-to-make-a-user-flow-diagram.
+- Diagrama de fluxo de login:
 
-![Exemplo de Diagrama de Fluxo](img/diagramafluxo2.jpg)
+Figura - Diagrama de fluxo de login
 
-As referências abaixo irão auxiliá-lo na geração do artefato “Diagramas de Fluxo”.
 
-> **Links Úteis**:
-> - [Fluxograma online: seis sites para fazer gráfico sem instalar nada | Produtividade | TechTudo](https://www.techtudo.com.br/listas/2019/03/fluxograma-online-seis-sites-para-fazer-grafico-sem-instalar-nada.ghtml)
+- Diagrama de fluxo de cadastro:
+
+Figura  - Diagrama de fluxo de cadastro
+
+
+- Diagrama de fluxo tela principal:
+
+Figura  - Diagrama de fluxo tela principal
+- Diagrama de fluxo de listagem dietas:
+
+Figura  - Diagrama de fluxo de listagem dietas
+
+
+- Diagrama de fluxo de listagem treinos:
+
+Figura  - Diagrama de fluxo de listagem de treinos
+
+
+- Diagrama de fluxo do calendário:
+
+Figura  - Diagrama de fluxo do calendário
+
+
 
 ## Wireframes
+Tela Início:
+A primeira tela que o usuário terá acesso é a página de login, onde ele conseguirá fazer o seu cadastro e posteriormente, acessar a plataforma.
 
-![Exemplo de Wireframe](img/wireframe-example.png)
 
-São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
- 
-> **Links Úteis**:
-> - [Protótipos vs Wireframes](https://www.nngroup.com/videos/prototypes-vs-wireframes-ux-projects/)
-> - [Ferramentas de Wireframes](https://rockcontent.com/blog/wireframes/)
-> - [MarvelApp](https://marvelapp.com/developers/documentation/tutorials/)
-> - [Figma](https://www.figma.com/)
-> - [Adobe XD](https://www.adobe.com/br/products/xd.html#scroll)
-> - [Axure](https://www.axure.com/edu) (Licença Educacional)
-> - [InvisionApp](https://www.invisionapp.com/) (Licença Educacional)
+Figura  - Wireframe página inicial APP
+
+
+Tela Cadastro:
+	Construímos uma tela para cadastramento colhendo a quantidade necessária de informações do usuário. Cadastro rápido e simplificado.
+
+
+Figura  - Wireframe página inicial APP
+
+
+Tela Home:
+	Na página principal, após login no APP, o usuário irá visualizar o menu no rodapé, para navegação entre as funcionalidades.
+	Ao centro da tela contém informações sobre a rotina de treinos e dieta do dia corrente.
+
+Figura  - Wireframe página inicial APP
+
+
+
+Tela Dieta:
+	Tela exclusiva para manutenção e cadastramento da dieta.
+
+Figura  - Wireframe página inicial APP
+
+
+Tela Cadastrar Dieta:
+	Tela cadastramento das refeições.
+
+Figura  - Wireframe página inicial APP
+
+
+Tela Treinos:
+Tela exclusiva para manutenção e cadastramento dos treinos, separados por dias da semana.
+
+Figura  - Wireframe página inicial APP
+
+
+Tela Cadastrar Treino:
+Tela cadastramento dos treinos.
+
+Figura  - Wireframe página inicial APP
+
+
+Tela Calendário:
+	A sua funcionalidade principal será auxiliar o usuário no controle de sua rotina de dieta e treino.
+
+Figura  - Wireframe página inicial APP
+
+
+Tela Meus Dados:
+	Tela para alteração dos dados do cadastro, assim como alteração de senha.
+
+Figura  - Wireframe página inicial APP
