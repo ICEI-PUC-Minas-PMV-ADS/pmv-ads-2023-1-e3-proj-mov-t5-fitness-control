@@ -36,16 +36,24 @@ O modelo físico do projeto encontra-se em um arquivo banco.sql hospedado dentro
 |**LINGUAGEM**|
 |:---------:|
 |JAVASCRIPT|
-|**FRAMEWORK**|       
+
+|**FRAMEWORK**|
+|:---------:|
 |REACT NATIVE|
+
 |**BIBLIOTECAS**|
+|:---------:|
 |REACT NATIVE PAPER|
 |REACT NATIVE ASYNC STORAGE|
 |REACT NATIVE VECTOR ICON|
 |REACT NAVIGATION|
+
 |**IDE**|
+|:---------:|
 |VS CODE|
+
 |**FERRAMENTAS**|
+|:---------:|
 |DISCORD|
 |GITHUB|
 
