@@ -60,7 +60,7 @@ O modelo físico do projeto encontra-se em um arquivo banco.sql hospedado dentro
 
 
 ## Hospedagem
-O back-end da aplicação ficará hospedado na plataforma [Heroku](https://www.heroku.com/). O front-end será hospedado na plataforma [Vercel](https://vercel.com) onde será possível fazer o deploy do front-end do nosso app.
+O back-end da aplicação ficará hospedado na plataforma [Heroku](https://www.heroku.com/). O front-end será exibido diretamente no aparelho móvel do usuário.
 
 
 ## Qualidade de Software
