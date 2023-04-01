@@ -1,8 +1,9 @@
 # Arquitetura da Solução
 
-<span style="color:red">Pré-requisitos: <a href="3-Projeto de Interface.md"> Projeto de Interface</a></span>
-
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
+
+![02-mob-arch](https://user-images.githubusercontent.com/103429022/229297009-822f0874-62e7-4e55-9800-4a5b621a4e0d.png)
+
 
 ## Diagrama de Classes
 
