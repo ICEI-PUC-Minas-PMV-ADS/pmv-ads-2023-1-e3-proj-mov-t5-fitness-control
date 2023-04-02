@@ -1,11 +1,9 @@
 # Plano de Testes de Usabilidade
 
-O teste de usabilidade permite avaliar a qualidade da interface com o usuário da aplicação interativa. O Plano de Testes de Software é gerado a partir da especificação do sistema e consiste em casos de testes que deverão ser executados quando a implementação estiver parcial ou totalmente pronta.
+O teste de usabilidade irá auxiliar na avaliação da interface com o usuário no desenvolvimento da aplicação. Ele é gerado de acordo com as especificações do projeto. Esse tipo de teste é realizado por pessoas externas ao projeto e é supervisionado por membros da equipe a fim de encontrar algum problema ou falha no sistema. Nesse tipo de teste a dificuldade de uso e como o usuário utiliza o sistema são pontos extremamente relevantes na construção da aplicação.
 
-As referências abaixo irão auxiliá-lo na geração do artefato "Plano de Testes de Usabilidade".
-
-> **Links Úteis**:
-> - [Teste De Usabilidade: O Que É e Como Fazer Passo a Passo (neilpatel.com)](https://neilpatel.com/br/blog/teste-de-usabilidade/)
-> - [Teste de usabilidade: tudo o que você precisa saber! | by Jon Vieira | Aela.io | Medium](https://medium.com/aela/teste-de-usabilidade-o-que-voc%C3%AA-precisa-saber-39a36343d9a6/)
-> - [Planejando testes de usabilidade: o que (e o que não) fazer | iMasters](https://imasters.com.br/design-ux/planejando-testes-de-usabilidade-o-que-e-o-que-nao-fazer/)
-> - [Ferramentas de Testes de Usabilidade](https://www.usability.gov/how-to-and-tools/resources/templates.html)
+![Teste de Usabilidade 1](./img/testedeUsab1.png)
+![Teste de Usabilidade 2](./img/testedeUsab2.png)
+![Teste de Usabilidade 3](./img/testedeUsab3.png)
+![Teste de Usabilidade 4](./img/testedeUsab4.png)
+![Teste de Usabilidade 5](./img/testedeUsab5.png)
