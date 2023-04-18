@@ -1,7 +1,0 @@
-{
-  "name": "FitnessControl",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "react-vite"
-}
