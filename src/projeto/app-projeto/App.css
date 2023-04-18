@@ -1,0 +1,7 @@
+.container {
+    background-color: white;
+    flex: 1;
+    padding: 20px;
+    justify-content: center;
+    background-color: white;
+}

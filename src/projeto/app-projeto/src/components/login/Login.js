@@ -3,12 +3,15 @@ import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'rea
 import { Ionicons } from '@expo/vector-icons';
 
 const Login = () => {
+
     const [senha, setSenha] = useState('');
     const [hidePass, setHidePass] = useState(true);
 
     return (
         <>
-            <Text style={styles.titulo}> FITNESS CONTROL </Text>
+            <Text style={styles.titulo}>
+                FITNESS CONTROL
+            </Text>
 
             <View style={styles.inputArea}>
                 <TextInput
@@ -44,6 +47,7 @@ const Login = () => {
             <Button title="Cadastrar" color="gray" />
         </>
     );
+
 };
 
 const styles = StyleSheet.create({
@@ -80,4 +84,5 @@ const styles = StyleSheet.create({
         backgroundColor: '#000000',
     },
 });
+
 export default Login;

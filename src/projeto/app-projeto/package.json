@@ -8,15 +8,18 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+    "@expo/webpack-config": "^0.17.2",
+    "babel-plugin-react-native-classname-to-style": "^1.2.2",
+    "babel-plugin-react-native-platform-specific-extensions": "^1.1.1",
     "expo": "~47.0.12",
     "expo-constants": "~14.0.2",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
-    "react-native": "0.70.8",
-    "react-native-paper": "4.9.2",
-    "react-native-web": "~0.18.9",
     "react-dom": "18.1.0",
-    "@expo/webpack-config": "^0.17.2"
+    "react-native": "0.70.8",
+    "react-native-css-transformer": "^1.2.4",
+    "react-native-paper": "^5.7.0",
+    "react-native-web": "~0.18.9"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",

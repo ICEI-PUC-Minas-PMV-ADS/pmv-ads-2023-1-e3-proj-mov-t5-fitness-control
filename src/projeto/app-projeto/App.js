@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, StyleSheet } from 'react-native';
 
-import Cadastro from './src/components/FormularioCadastro.js'
+import Cadastro from './src/components/cadastro/Cadastro.js'
 
 const App = () => {
     return (
