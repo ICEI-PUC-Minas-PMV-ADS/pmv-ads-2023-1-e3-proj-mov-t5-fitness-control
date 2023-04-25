@@ -4,7 +4,7 @@ import Header from '../components/Header.js';
 import Body from '../components/Body.js';
 
 
-const Dieta = () => {
+const Usuario = () => {
 
     return (
         <>
@@ -14,7 +14,7 @@ const Dieta = () => {
             <Body>
             </Body>
             
-            <BottomNavigation currentBottomNavigationTabIndex={1} />
+            <BottomNavigation currentBottomNavigationTabIndex={5} />
         
         </>
         
@@ -24,4 +24,4 @@ const Dieta = () => {
     );
 };
 
-export default Dieta;
+export default Usuario;

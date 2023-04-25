@@ -8,6 +8,10 @@ import Cadastro from '../pages/Cadastro.js';
 
 import Home from '../pages/Home.js';
 import Dieta from '../pages/Dieta.js';
+import Treinos from '../pages/Treinos.js';
+import Calendario from '../pages/Calendario.js';
+import Usuario from '../pages/Usuario.js';
+
 
 const Stack = createNativeStackNavigator();
 
@@ -41,6 +45,16 @@ const Main = () => {
                         <Stack.Screen
                             name="Dieta"
                             component={Dieta} />
+                        <Stack.Screen
+                            name="Treinos"
+                            component={Treinos} />
+                        <Stack.Screen
+                            name="Calendario"
+                            component={Calendario} />
+                        <Stack.Screen
+                            name="Usuario"
+                            component={Usuario} />
+
                     </>
                 ) : (
                     <>
