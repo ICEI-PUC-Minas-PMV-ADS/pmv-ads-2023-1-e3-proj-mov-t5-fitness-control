@@ -13,15 +13,12 @@ const Treinos = () => {
 
             <Body>
             </Body>
-            
+
             <BottomNavigation currentBottomNavigationTabIndex={2} />
-        
+
         </>
-        
-        
-
-
     );
+
 };
 
 export default Treinos;

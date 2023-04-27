@@ -14,7 +14,7 @@ const Login = () => {
     const [login, setLogin] = useState('');
 
     const logar = () => {
-    
+
         try {
 
             if (login && senha) {
@@ -26,7 +26,7 @@ const Login = () => {
 
                     // ARMAZENAR TODOS OS DADOS DO USUARIO
                     UsuarioService.setUsuarioStorage({ id: 1 });
-        
+
                     navigation.navigate('Home');
 
                 } else {
@@ -34,14 +34,14 @@ const Login = () => {
                     throw new Error('Usuário ou senha inválidos!');
 
                 }
-    
+
             } else {
 
                 throw new Error('Necessário informar usuário e senha!');
 
             }
 
-        } catch(err) {
+        } catch (err) {
 
             alert(err.message);
 
@@ -88,7 +88,7 @@ const Login = () => {
 
             <Button title="Acessar" color="red" onPress={logar} />
 
-            <Button title="Cadastrar" color="gray" 
+            <Button title="Cadastrar" color="gray"
                 onPress={() => { navigation.navigate('Cadastro'); }}
             />
         </>

@@ -1,19 +1,18 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native'
+import { StyleSheet, View } from 'react-native';
 
-const Body = ({children})=>{
+const Body = ({ children }) => {
 
-  return <View style={styles.body}>{children}</View>
+    return <View style={styles.body}>{children}</View>
 
-}
+};
 
 const styles = StyleSheet.create({
-  body: {
-    flex: 1,
-    backgroundColor: '#FFFFFF',
-    margin: 8
-  }
-})
-
+    body: {
+        flex: 1,
+        backgroundColor: '#FFFFFF',
+        margin: 8
+    }
+});
 
 export default Body;

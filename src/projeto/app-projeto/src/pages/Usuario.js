@@ -13,15 +13,12 @@ const Usuario = () => {
 
             <Body>
             </Body>
-            
+
             <BottomNavigation currentBottomNavigationTabIndex={5} />
-        
+
         </>
-        
-        
-
-
     );
+
 };
 
 export default Usuario;

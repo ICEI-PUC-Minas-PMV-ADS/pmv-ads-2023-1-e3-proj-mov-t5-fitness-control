@@ -2,12 +2,12 @@ import * as SQLite from 'expo-sqlite';
 
 const Database = {
 
-    getConnection: ()=>{
+    getConnection: () => {
         const db = SQLite.openDatabase('fitness-control.db');
 
-        db.transaction((tx)=>{
+        db.transaction((tx) => {
             tx.executeSql('CREATE TABLE if not exists usuarios(id integer primary key not null, nome text not null, email text note null,senha text not null);');
- 
+
 
             tx.executeSql('CREATE TABLE if not exists dieta(id integer primary key not null, horario text not null, refeicao text not null, observacao text);');
 
@@ -27,25 +27,25 @@ const Database = {
         });
 
         const ExecuteQuery = (sql, params = []) =>
-        new Promise((resolve, reject) => {
-          db.transaction((trans) => {
-            trans.executeSql(
-              sql,
-              params,
-              (trans, results) => {
-                resolve(results);
-              },
-              (error) => {
-                reject(error);
-              }
-            );
-          });
-        });
-  
-      return ExecuteQuery;
+            new Promise((resolve, reject) => {
+                db.transaction((trans) => {
+                    trans.executeSql(
+                        sql,
+                        params,
+                        (trans, results) => {
+                            resolve(results);
+                        },
+                        (error) => {
+                            reject(error);
+                        }
+                    );
+                });
+            });
+
+        return ExecuteQuery;
     }
 
-    
+
 }
 
 

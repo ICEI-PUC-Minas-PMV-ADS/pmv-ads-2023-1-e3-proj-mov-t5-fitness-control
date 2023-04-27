@@ -8,7 +8,7 @@ export const setUsuarioStorage = async (usuario) => {
         'usuario',
         JSON.stringify(usuario)
     );
-    
+
 };
 
 export const getUsuarioStorage = async () => {
@@ -22,7 +22,7 @@ export const getUsuarioStorage = async () => {
 export const temUsuarioLogado = async () => {
 
     const usuario = await getUsuarioStorage();
-  
+
     return !!usuario;
 
 };

@@ -49,10 +49,10 @@ const Main = () => {
                             name="Treinos"
                             component={Treinos} />
                         <Stack.Screen
-                            name="Calendario"
+                            name="Calendário"
                             component={Calendario} />
                         <Stack.Screen
-                            name="Usuario"
+                            name="Usuário"
                             component={Usuario} />
 
                     </>

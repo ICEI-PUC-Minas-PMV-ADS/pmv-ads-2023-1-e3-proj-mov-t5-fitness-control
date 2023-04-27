@@ -1,14 +1,14 @@
 import { useState } from 'react';
 import React from 'react';
-import { View, Text, StyleSheet, Button, TextInput } from 'react-native';
-import { insertUsuarios } from '../services/UsuariosDB.service';
+import { Text, StyleSheet, Button, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
+import { insertUsuarios } from '../services/UsuariosDB.service';
 
 const Cadastro = () => {
+
     const navigation = useNavigation();
 
-    
     const [senha, setSenha] = useState('');
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
@@ -25,6 +25,7 @@ const Cadastro = () => {
         navigation.navigate('Login');
 
     }
+
     return (
         <>
             <Text style={styles.titulo}>
