@@ -3,7 +3,7 @@ import React from 'react';
 import { Text, StyleSheet, Button, TextInput } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
-import { insertUsuarios } from '../services/UsuariosDB.service';
+import { insertUsuarios, getUsuarios } from '../services/UsuariosDB.service';
 
 const Cadastro = () => {
 
@@ -14,6 +14,7 @@ const Cadastro = () => {
     const [email, setEmail] = useState('');
 
     const cadastrar = () => {
+
         insertUsuarios(
             {
                 nome: nome,
@@ -21,6 +22,8 @@ const Cadastro = () => {
                 sebha: senha
             }
         ).then();
+
+        getUsuarios().then();
 
         navigation.navigate('Login');
 
