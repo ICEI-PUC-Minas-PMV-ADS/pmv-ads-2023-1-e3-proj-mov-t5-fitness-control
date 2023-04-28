@@ -41,7 +41,6 @@ const Main = () => {
                         <Stack.Screen
                             name="Home"
                             component={Home} />
-
                         <Stack.Screen
                             name="Dieta"
                             component={Dieta} />
@@ -49,19 +48,17 @@ const Main = () => {
                             name="Treinos"
                             component={Treinos} />
                         <Stack.Screen
-                            name="Calendário"
+                            name="Calendario"
                             component={Calendario} />
                         <Stack.Screen
-                            name="Usuário"
+                            name="Usuario"
                             component={Usuario} />
-
                     </>
                 ) : (
                     <>
                         <Stack.Screen
                             name="Login"
                             component={Login} />
-
                         <Stack.Screen
                             name="Cadastro"
                             component={Cadastro} />

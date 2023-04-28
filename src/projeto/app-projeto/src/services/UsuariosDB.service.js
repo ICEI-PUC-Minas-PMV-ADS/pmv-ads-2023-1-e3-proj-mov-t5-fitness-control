@@ -4,7 +4,7 @@ const DB_EXEC = Database.getConnection();
 
 export const getUsuarios = async () => {
 
-    let results = await DB_EXEC(`select * from usuarios`);
+    let results = await DB_EXEC(`SELECT * FROM usuarios`);
 
     console.log(results.rows);
 
@@ -13,7 +13,10 @@ export const getUsuarios = async () => {
 
 export const insertUsuarios = async (params) => {
 
-    let results = await DB_EXEC(`insert into usuarios (nome, email, senha) values (?, ?, ?)`, [params.nome, params.email, params.senha])
+    let results = await DB_EXEC(
+        `INSET INTO USUARIOS (nome, email, senha) VALUES (?, ?, ?)`,
+        [params.nome, params.email, params.senha]
+    );
 
     return results.rowsAffected;
 

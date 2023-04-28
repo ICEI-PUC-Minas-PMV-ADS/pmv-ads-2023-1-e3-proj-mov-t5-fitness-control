@@ -15,13 +15,11 @@ const Cadastro = () => {
 
     const cadastrar = () => {
 
-        insertUsuarios(
-            {
-                nome: nome,
-                email: email,
-                sebha: senha
-            }
-        ).then();
+        insertUsuarios({
+            nome: nome,
+            email: email,
+            senha: senha
+        }).then();
 
         getUsuarios().then();
 
