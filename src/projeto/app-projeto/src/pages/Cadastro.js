@@ -1,8 +1,31 @@
+import { useState } from 'react';
 import React from 'react';
-import { View, Text, StyleSheet, Button, TextInput } from 'react-native';
+import { Text, StyleSheet, Button, TextInput } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
+import { insertUsuarios, getUsuarios } from '../services/UsuariosDB.service';
 
 const Cadastro = () => {
+
+    const navigation = useNavigation();
+
+    const [senha, setSenha] = useState('');
+    const [nome, setNome] = useState('');
+    const [email, setEmail] = useState('');
+
+    const cadastrar = () => {
+
+        insertUsuarios({
+            nome: nome,
+            email: email,
+            senha: senha
+        }).then();
+
+        getUsuarios().then();
+
+        navigation.navigate('Login');
+
+    }
 
     return (
         <>
@@ -14,29 +37,30 @@ const Cadastro = () => {
                 style={styles.input}
                 placeholder="Nome"
                 keyboardType="string"
+                value={nome}
+                onChangeText={(texto) => setNome(texto)}
             />
 
             <TextInput
                 style={styles.input}
                 placeholder="E-mail"
                 keyboardType="string"
+                value={email}
+                onChangeText={(texto) => setEmail(texto)}
             />
 
             <TextInput
                 style={styles.input}
                 placeholder="Senha"
                 keyboardType="string"
-            />
-
-            <TextInput
-                style={styles.input}
-                placeholder="Confirmar senha"
-                keyboardType="string"
+                value={senha}
+                onChangeText={(texto) => setSenha(texto)}
             />
 
             <Button
                 title="Cadastrar"
                 color='red'
+                onPress={cadastrar}
             />
 
         </>
