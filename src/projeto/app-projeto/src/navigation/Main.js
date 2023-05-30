@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import * as UsuarioService from '../services/Usuario.service.js';
+import UsuarioServiceClass from '../services/Usuario.service';
 
 import Login from '../pages/Login.js';
 import Cadastro from '../pages/Cadastro.js';
@@ -20,6 +21,13 @@ const Main = () => {
     const [usuarioLogado, setUsuarioLogado] = useState(null);
 
     useEffect(() => {
+
+        // EVENTO DE ALTERACAO DO USUARIO
+        UsuarioServiceClass.usuarioLogadoChangeObservable.subscribe(usuario => {
+        
+            getToken();
+    
+        });
 
         async function getToken() {
 
