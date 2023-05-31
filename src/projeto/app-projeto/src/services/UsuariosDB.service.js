@@ -2,11 +2,13 @@ import Database from './Banco.service.js'
 
 const DB_EXEC = Database.getConnection();
 
-export const getUsuarios = async () => {
+export const getUsuario = async (params) => {
 
-    let results = await DB_EXEC(`SELECT * FROM usuarios`);
+    let results = await DB_EXEC(`
+        SELECT * FROM usuarios WHERE id = ${params.id}
+    `);
 
-    return results.rows._array;
+    return results.rows && results.rows.length ? results.rows[0] : null;
 }
 
 export const insertUsuarios = async (params) => {

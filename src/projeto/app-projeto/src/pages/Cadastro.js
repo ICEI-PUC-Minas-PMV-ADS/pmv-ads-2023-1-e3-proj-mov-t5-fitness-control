@@ -21,7 +21,7 @@ const Cadastro = () => {
             senha: senha
         }).then();
 
-        getUsuarios().then();
+        
 
         navigation.navigate('Login');
 
