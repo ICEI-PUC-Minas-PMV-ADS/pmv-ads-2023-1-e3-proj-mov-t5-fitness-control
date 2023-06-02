@@ -77,7 +77,7 @@ Nesta seção serão apresentadas as telas desenvolvidas para cada uma das funci
 
 
 
-![tela de calendario](./img/wireframe/6-treinos.png)
+![tela de calendario](./img/wireframe/8-calendario.png)
 
 ### Requisitos Atendidos
 
