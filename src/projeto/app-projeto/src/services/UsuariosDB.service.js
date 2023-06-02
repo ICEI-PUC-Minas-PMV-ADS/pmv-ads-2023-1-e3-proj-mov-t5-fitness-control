@@ -31,3 +31,18 @@ export const getLoginUsuario = async (params) => {
     return results.rows && results.rows.length ? results.rows[0] : null;
 
 }
+
+export const updateUsuario = async (params) => {
+
+    let results = await DB_EXEC(`
+        UPDATE usuarios 
+        SET
+            nome = '${params.nome}',
+            email = '${params.email}'  
+        WHERE
+            id = ${params.id}
+    `);
+
+    return results.rowsAffected;
+
+}

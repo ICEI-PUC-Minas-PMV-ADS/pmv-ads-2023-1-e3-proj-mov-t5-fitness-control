@@ -12,6 +12,10 @@ const Usuario = () => {
 
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [editing, setEditing] = useState(false);
+ 
+
+   
 
     useEffect(() => {
 
@@ -23,7 +27,7 @@ const Usuario = () => {
 
                 const usuario = await UsuariosDB.getUsuario({ id: usuarioLogado.id });
                 
-                if(usuario){
+                if(usuario && !editing){
                     setName(usuario.nome)
                     setEmail(usuario.email)
                 }
@@ -44,9 +48,23 @@ const Usuario = () => {
         navigation.navigate('Login')
     }
 
-    const saveAtt =  ()=>{
+    const saveAtt = () => {
+        setEditing(true);
+    };
 
-    }
+    const updateUser = async () => {
+        const usuarioLogado = await UsuarioService.getUsuarioStorage()
+        try {
+          await UsuariosDB.updateUsuario({
+            id: usuarioLogado.id,
+            nome: name,
+            email: email,
+          });
+          setEditing(false);
+        } catch (error) {
+          console.error('Erro ao atualizar o usuário:', error);
+        }
+    };
 
     return (
         <>
@@ -58,15 +76,21 @@ const Usuario = () => {
                     value={name}
                     onChangeText={(text) => setName(text)}
                     placeholder="Nome"
+                    editable={editing}
                 >
                 </TextInput>
                 <TextInput
                     value={email}
                     onChangeText={(text) => setEmail(text)}
                     placeholder="Nome"
+                    editable={editing}
                 >
                 </TextInput>
-                <Button title="Salvar Alterações" color="blue" onPress={saveAtt} />
+                {editing ? (
+                    <Button title="Salvar" color="green" onPress={updateUser} />
+                ) : (
+                    <Button title="Editar" color="blue" onPress={saveAtt} />
+                )}
                 <Button title="Deslogar" color="red" onPress={deslogar} />
             </Body>
            
