@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, TextInput, Alert } from 'react-native';
+import { View, Text, StyleSheet, TouchableOpacity, TextInput } from 'react-native';
 import { TextInputMask } from 'react-native-masked-text';
 import { FontAwesome5 } from '@expo/vector-icons';
 
@@ -56,33 +56,19 @@ const Dieta = () => {
 
     };
 
-    const handleRemoverPress = (dietaId) => {
+    const handleRemoverPress = async (dietaId) => {
 
-        Alert.alert(
-            'Atenção',
-            'Deseja realmente remover essa refeição?',
-            [
-                {
-                    text: 'Não',
-                    style: 'cancel',
-                },
-                {
-                    text: 'Sim',
-                    onPress: async () => {
+        let remover = confirm('Remover essa refeição?');
+        if (!remover) return;
 
-                        const usuarioLogado = await UsuarioService.getUsuarioStorage();
+        const usuarioLogado = await UsuarioService.getUsuarioStorage();
 
-                        await DietaDB.removeDieta({
-                            id: dietaId,
-                            usuarioId: usuarioLogado.id
-                        });
+        await DietaDB.removeDieta({
+            id: dietaId,
+            usuarioId: usuarioLogado.id
+        });
 
-                        buscarDietas();
-
-                    },
-                },
-            ]
-        );
+        buscarDietas();
 
     };
 
