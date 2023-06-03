@@ -4,6 +4,8 @@ import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
 import * as UsuarioService from '../services/Usuario.service';
+import UsuarioServiceClass from '../services/Usuario.service';
+import { getLoginUsuario } from '../services/UsuariosDB.service';
 
 const Login = () => {
 
@@ -13,21 +15,24 @@ const Login = () => {
     const [hidePass, setHidePass] = useState(true);
     const [login, setLogin] = useState('');
 
-    const logar = () => {
+    const logar = async () => {
 
         try {
 
             if (login && senha) {
 
                 // CONSULTAR USUARIO BANCO
+                let usuarioDados = await getLoginUsuario({
+                    email: login,
+                    senha: senha
+                });
 
                 // VALIDA SENHA
-                if (true) {
+                if (usuarioDados && usuarioDados.id) {
 
                     // ARMAZENAR TODOS OS DADOS DO USUARIO
-                    UsuarioService.setUsuarioStorage({ id: 1 });
-
-                    navigation.navigate('Home');
+                    UsuarioService.setUsuarioStorage(usuarioDados);
+                    UsuarioServiceClass.usuarioLogadoChangeObservable.next(true);
 
                 } else {
 
@@ -43,6 +48,7 @@ const Login = () => {
 
         } catch (err) {
 
+            UsuarioService.removeUsuarioStorage();
             alert(err.message);
 
         }

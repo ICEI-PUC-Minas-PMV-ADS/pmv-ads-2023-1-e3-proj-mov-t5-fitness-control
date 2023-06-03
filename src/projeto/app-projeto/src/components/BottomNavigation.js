@@ -19,7 +19,7 @@ const BottomNavigation = (props) => {
                 <Icon
                     name="cutlery"
                     style={(bottomNavigationTabIndex == 1) ? styles.selectedNavigationButtonIcon : styles.navigationButtonIcon}
-                    size={21}>
+                    size={26}>
                 </Icon>
             </Pressable>
 
@@ -27,7 +27,7 @@ const BottomNavigation = (props) => {
                 <Icon
                     name="bicycle"
                     style={(bottomNavigationTabIndex == 2) ? styles.selectedNavigationButtonIcon : styles.navigationButtonIcon}
-                    size={21}>
+                    size={26}>
                 </Icon>
             </Pressable>
 
@@ -35,7 +35,7 @@ const BottomNavigation = (props) => {
                 <Icon
                     name="home"
                     style={(bottomNavigationTabIndex == 3) ? styles.selectedNavigationButtonIcon : styles.navigationButtonIcon}
-                    size={21}>
+                    size={44}>
                 </Icon>
             </Pressable>
 
@@ -43,7 +43,7 @@ const BottomNavigation = (props) => {
                 <Icon
                     name="calendar"
                     style={(bottomNavigationTabIndex == 4) ? styles.selectedNavigationButtonIcon : styles.navigationButtonIcon}
-                    size={21}>
+                    size={26}>
                 </Icon>
             </Pressable>
 
@@ -51,7 +51,7 @@ const BottomNavigation = (props) => {
                 <Icon
                     name="user"
                     style={(bottomNavigationTabIndex == 5) ? styles.selectedNavigationButtonIcon : styles.navigationButtonIcon}
-                    size={21}>
+                    size={26}>
                 </Icon>
             </Pressable>
         </View>
@@ -62,9 +62,11 @@ const styles = StyleSheet.create({
     bottomNavigationContainer: {
         width: '100%',
         height: 64,
+        paddingStart: 10,
+        paddingEnd: 10,
         backgroundColor: '#f06464',
         flexDirection: "row",
-        justifyContent: "space-around",
+        justifyContent: "space-between",
         alignItems: 'center',
         position: 'absolute',
         bottom: 0
@@ -77,20 +79,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         color: 'black',
         margin: 6,
-        marginBottom: 0,
         padding: 6,
-        paddingLeft: 21,
-        paddingRight: 21,
+        paddingLeft: 16,
+        paddingRight: 16,
         borderRadius: 24
     },
     selectedNavigationButtonIcon: {
         alignItems: 'center',
         color: 'black',
         margin: 6,
-        marginBottom: 0,
         padding: 6,
-        paddingLeft: 21,
-        paddingRight: 21,
+        paddingLeft: 16,
+        paddingRight: 16,
         backgroundColor: '#f69f9f',
         borderRadius: 24
     }
