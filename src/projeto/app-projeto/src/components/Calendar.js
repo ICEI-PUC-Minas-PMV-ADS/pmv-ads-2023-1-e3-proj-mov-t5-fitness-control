@@ -59,11 +59,8 @@ class MyCalendar extends React.Component {
             for (let col = 0; col < 7; col++) {
                 matrix[row][col] = -1
                 if (row == 1 && col >= firstDay) {
-                    // Fill in rows only after the first day of the month
                     matrix[row][col] = counter++
                 } else if (row > 1 && counter <= maxDays) {
-                    // Fill in rows only if the counter's not greater than
-                    // the number of days in the month
                     matrix[row][col] = counter++
                 }
             }
@@ -121,5 +118,5 @@ class MyCalendar extends React.Component {
         )
     }
 }
-// Export for now to get rid of error and see preview:
+
 export default MyCalendar

@@ -156,7 +156,7 @@ const Dieta = () => {
                                 <Text style={styles.titulo}>Editando Dieta</Text>
                                 :
                                 <Text style={styles.titulo}>Adicionando Dieta</Text>
-                            }
+                            } 
                         </View>
 
                         <View style={styles.lista}>
