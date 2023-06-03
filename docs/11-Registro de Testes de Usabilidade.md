@@ -2,30 +2,67 @@
 
 Após realizar os testes de usabilidade, obtém-se um relatório a partir das análises realizadas. O Registro de Testes de Usabilidade é um relatório que contém as evidências dos testes e relatos dos usuários participantes, baseado no Plano de Testes de Usabilidade desenvolvido para os casos de uso desta etapa.
 
-## TESTE-01 Realizar cadastro de novo usuário 
+## CT 01 - Realizar cadastro na plataforma
 
-![Realizar cadastro](https://user-images.githubusercontent.com/108990294/236636052-dc6e448c-bc22-4919-a337-a51918a946ff.PNG)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/13fcfb71-b85a-4aa7-8ee7-1917727daa74)
 
-## TESTE-02 Realizar login 
 
-![Realizar login](https://user-images.githubusercontent.com/108990294/236636455-68ab68f2-6978-4130-97bf-80ecf85f4ad3.PNG)
+## CT 02 - Realizar Login no sistema
 
-## TESTE-03 Realizar cadastro de nova dieta 
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/92fc95b2-7dbf-4ae2-aaef-b6f5194b16f7)
 
-![Realizar cadastro](https://user-images.githubusercontent.com/108990294/236636521-665735bb-d4fa-4f85-bbe6-a16c06b84c84.PNG)
 
-## TESTE-04 Realizar cadastro de novo treino 
+## CT 03 - Marcar se a dieta foi feita
 
-![Cadastro treino](https://user-images.githubusercontent.com/108990294/236636624-3e204cf7-aa32-41e3-9808-8d6e5f40e16b.PNG)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/d79ff299-228b-471a-9afe-b980932e4e3c)
 
-## TESTE-05 Realizar consulta no calendário 
 
-![consulta no calendário](https://user-images.githubusercontent.com/108990294/236636684-2b4b8e25-32a9-4c5a-9dc8-6cd9040c4d61.PNG)
+## CT 04 - Marcar se o treino foi feito
 
-## TESTE-06 Realizar consulta de dieta
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/c4f4b063-7b1c-4512-9b97-a2ccf1924f5f)
 
-![consulta de dieta](https://user-images.githubusercontent.com/108990294/236636952-ef577f5a-ea5b-4a5d-a274-4885765b6039.PNG)
 
-## TESTE-07 Realizar consulta de treino
+## CT 05 - Cadastrar uma nova dieta
 
-![Consulta treino](https://user-images.githubusercontent.com/108990294/236636868-840b6962-4097-460f-919d-4134afabf06f.PNG)
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/8068f79c-db4e-48d1-9d63-d1e3ba65c0da)
+
+
+## CT 06 - Cadastrar um novo treino
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/464d6a3b-2624-4b95-b9a2-4956519806f0)
+
+
+## CT 07 - Editar a dieta
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/5a151dd2-e6e4-46ce-bcd9-47cc429be911)
+
+
+## CT 08 - Editar o treino
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/b3de6e9c-d7eb-43e7-b4e5-ab08f4ad06d1)
+
+
+## CT 09 - Excluir o treino
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/3cc69975-f16e-43b7-82f5-a59afc1ae683)
+
+
+## CT 10 - Excluir a dieta
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/0a822dc8-46fc-4e8b-9391-2057bfe6b26f)
+
+
+## CT 11 - Cadastrar macronutrientes da dieta
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/1e13e666-f349-416d-b807-bbcb1089166c)
+
+
+## CT 12 - Acessar calendário
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/c353da4c-7b21-4711-b7c5-266e284300c2)
+
+
+## CT 13 - Editar informações de cadastro
+
+![image](https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control/assets/103429022/33aa58c7-bcdb-46fe-b8af-650028dfa3c4)
+
