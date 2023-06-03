@@ -112,11 +112,20 @@ class MyCalendar extends React.Component {
                     {this.state.activeDate.getFullYear()}
                 </RN.Text>
                 {rows}
-                <RN.Button title="Voltar" onPress={() => this.changeMonth(-1)} />
-                <RN.Button title="Avançar" onPress={() => this.changeMonth(+1)} />
+                <RN.View style={styles.buttonContainer}>
+                    <RN.Button title="Voltar" onPress={() => this.changeMonth(-1)} />
+                    <RN.Button title="Avançar" onPress={() => this.changeMonth(+1)} />
+                </RN.View>
             </RN.View>
         )
     }
 }
+const styles = RN.StyleSheet.create({
+    buttonContainer: {
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        marginTop: 16,
+    },
+})
 
 export default MyCalendar
