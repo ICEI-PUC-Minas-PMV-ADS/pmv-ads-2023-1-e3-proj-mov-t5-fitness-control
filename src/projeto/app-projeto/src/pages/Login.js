@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet, Button, TextInput, TouchableOpacity, Modal } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -14,6 +14,8 @@ const Login = () => {
     const [senha, setSenha] = useState('');
     const [hidePass, setHidePass] = useState(true);
     const [login, setLogin] = useState('');
+    const [modalVisible, setModalVisible] = useState(false);
+    const [modalMessage, setModalMessage] = useState('');
 
     const logar = async () => {
 
@@ -36,20 +38,23 @@ const Login = () => {
 
                 } else {
 
-                    throw new Error('Usuário ou senha inválidos!');
+                    setModalMessage('Usuário ou senha inválidos!');
+                    setModalVisible(true);
 
                 }
 
             } else {
 
-                throw new Error('Necessário informar usuário e senha!');
+                setModalMessage('Necessário informar usuário e senha!');
+                setModalVisible(true);
 
             }
 
         } catch (err) {
 
             UsuarioService.removeUsuarioStorage();
-            alert(err.message);
+            setModalMessage(err.message);
+            setModalVisible(true);
 
         }
 
@@ -97,6 +102,15 @@ const Login = () => {
             <Button title="Cadastrar" color="gray"
                 onPress={() => { navigation.navigate('Cadastro'); }}
             />
+
+            <Modal visible={modalVisible} animationType="fade" transparent={true} onRequestClose={() => setModalVisible(false)}>
+                <View style={styles.modalContainer}>
+                    <View style={styles.modalContent}>
+                        <Text style={styles.modalMessage}>{modalMessage}</Text>
+                        <Button style={styles.modalButton}title="OK" onPress={() => setModalVisible(false)}  color="red"/>
+                    </View>
+                </View>
+            </Modal>
         </>
     );
 
@@ -134,6 +148,23 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#000000',
+    },
+    modalContainer: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)',
+    },
+    modalContent: {
+        backgroundColor: '#FFFFFF',
+        padding: 20,
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    modalMessage: {
+        fontSize: 18,
+        marginBottom: 20,
     }
 });
 

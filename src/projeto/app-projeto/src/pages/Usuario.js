@@ -14,9 +14,6 @@ const Usuario = () => {
     const [email, setEmail] = useState('');
     const [editing, setEditing] = useState(false);
  
-
-   
-
     useEffect(() => {
 
         async function fetchUserData() {
@@ -32,13 +29,11 @@ const Usuario = () => {
                     setEmail(usuario.email)
                 }
                 
-    
             } catch(error) {
                 console.error('Erro ao obter os usuários do banco de dados:', error);
             }
 
         }
-
         fetchUserData();
 
     }, []);
@@ -60,6 +55,10 @@ const Usuario = () => {
             nome: name,
             email: email,
           });
+
+          const usuario = await UsuariosDB.getUsuario({ id: usuarioLogado.id });
+
+          UsuarioService.setUsuarioStorage(usuario)
           setEditing(false);
         } catch (error) {
           console.error('Erro ao atualizar o usuário:', error);
