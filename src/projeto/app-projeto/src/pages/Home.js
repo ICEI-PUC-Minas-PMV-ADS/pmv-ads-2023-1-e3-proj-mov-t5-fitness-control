@@ -2,6 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
+import { toast } from 'react-toastify';
 
 import BottomNavigation from '../components/BottomNavigation.js';
 import Header from '../components/Header.js';
@@ -31,6 +32,7 @@ const Home = () => {
             realizado
         });
         
+        toast.success('Dieta atualizada!');
 
     }
 
@@ -48,6 +50,8 @@ const Home = () => {
             usuarioId: usuarioLogado.id,
             realizado
         });
+
+        toast.success('Treino atualizado!');
         
     }
 
