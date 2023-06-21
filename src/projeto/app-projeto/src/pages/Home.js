@@ -7,6 +7,9 @@ import BottomNavigation from '../components/BottomNavigation.js';
 import Header from '../components/Header.js';
 import Body from '../components/Body.js';
 
+import * as CalendarioDB from '../services/CalendarioDB.service.js';
+import * as UsuarioService from '../services/Usuario.service';
+
 const Home = () => {
 
     const navigation = useNavigation();
@@ -18,12 +21,17 @@ const Home = () => {
 
     }
 
-    const handleAceitarDieta = () => {
-        
-    }
+    const handleDieta = async (realizado) => {
 
-    const handleRejeitarDieta = () => {
+        const usuarioLogado = await UsuarioService.getUsuarioStorage();
+
+        await CalendarioDB.insertDietaCalendario({
+            data: `${(new Date()).getFullYear()}-${((new Date()).getMonth() + 1).toString().padStart(2, '0')}-${(new Date()).getDate().toString().padStart(2, '0')}`,
+            usuarioId: usuarioLogado.id,
+            realizado
+        });
         
+
     }
 
     // TREINO
@@ -31,11 +39,15 @@ const Home = () => {
         navigation.navigate('Treinos');
     }
 
-    const handleAceitarTreino = () => {
+    const handleTreino = async (realizado) => {
         
-    }
+        const usuarioLogado = await UsuarioService.getUsuarioStorage();
 
-    const handleRejeitarTreino = () => {
+        await CalendarioDB.insertTreinoCalendario({
+            data: `${(new Date()).getFullYear()}-${((new Date()).getMonth() + 1).toString().padStart(2, '0')}-${(new Date()).getDate().toString().padStart(2, '0')}`,
+            usuarioId: usuarioLogado.id,
+            realizado
+        });
         
     }
 
@@ -69,13 +81,13 @@ const Home = () => {
                         <View style={styles.botoesAcao}>
                             <TouchableOpacity
                                 style={styles.botaoAcaoRejeitar}
-                                onPress={() => handleRejeitarDieta}>
+                                onPress={() => handleDieta(false)}>
                                 <FontAwesome name="close" style={styles.iconRejeitar} />
                             </TouchableOpacity>
 
                             <TouchableOpacity
                                 style={styles.botaoAcaoAceitar}
-                                onPress={() => handleAceitarDieta}>
+                                onPress={() => handleDieta(true)}>
                                 <FontAwesome name="check" style={styles.iconAceitar} />
                             </TouchableOpacity>
                         </View>
@@ -100,13 +112,13 @@ const Home = () => {
                         <View style={styles.botoesAcao}>
                             <TouchableOpacity
                                 style={styles.botaoAcaoRejeitar}
-                                onPress={() => handleRejeitarTreino}>
+                                onPress={() => handleTreino(false)}>
                                 <FontAwesome name="close" style={styles.iconRejeitar} />
                             </TouchableOpacity>
 
                             <TouchableOpacity
                                 style={styles.botaoAcaoAceitar}
-                                onPress={() => handleAceitarTreino}>
+                                onPress={() => handleTreino(true)}>
                                 <FontAwesome name="check" style={styles.iconAceitar} />
                             </TouchableOpacity>
                         </View>
