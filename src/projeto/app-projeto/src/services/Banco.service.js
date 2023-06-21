@@ -27,7 +27,7 @@ const Database = {
             `);
 
             tx.executeSql(`
-                CREATE TABLE if not exists treino (
+                CREATE TABLE IF NOT EXISTS treino (
                     id INTEGER PRIMARY KEY AUTOINCREMENT,
                     usuario_id INTEGER REFERENCES usuarios(id),
                     dia_semana integer VARCHAR NOT NULL,
@@ -38,10 +38,9 @@ const Database = {
             `);
 
             tx.executeSql(`
-                CREATE TABLE if not exists calendario (
-                    id INTEGER PRIMARY KEY AUTOINCREMENT,
+                CREATE TABLE IF NOT EXISTS calendario (
+                    data DATE PRIMARY KEY NOT NULL,
                     usuario_id INTEGER REFERENCES usuarios(id),
-                    data DATE NOT NULL,
                     treino_check BOOLEAN NOT NULL DEFAULT false,
                     dieta_check BOOLEAN NOT NULL DEFAULT false
                 );

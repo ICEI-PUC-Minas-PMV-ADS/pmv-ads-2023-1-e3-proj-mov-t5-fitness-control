@@ -20,7 +20,7 @@ export const setUsuarioStorage = async (usuario) => {
         'usuario',
         JSON.stringify(usuario)
     );
-
+    
 };
 
 export const getUsuarioStorage = async () => {

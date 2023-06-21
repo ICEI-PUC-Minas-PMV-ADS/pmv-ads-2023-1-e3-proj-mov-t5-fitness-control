@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { NavigationContainer } from '@react-navigation/native';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 import Main from './src/navigation/Main.js'
 
@@ -12,6 +14,18 @@ const App = () => {
             <NavigationContainer>
                 <Main />
             </NavigationContainer>
+            <ToastContainer
+                position="bottom-right"
+                autoClose={1500}
+                hideProgressBar
+                newestOnTop
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss={false}
+                draggable
+                pauseOnHover={false}
+                theme="light"
+            />
         </SafeAreaProvider>
     );
 
