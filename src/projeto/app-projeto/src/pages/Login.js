@@ -61,7 +61,7 @@ const Login = () => {
     }
 
     return (
-        <>
+        <View style={{margin: 20}}>
             <Text style={styles.titulo}>
                 FITNESS CONTROL
             </Text>
@@ -111,7 +111,7 @@ const Login = () => {
                     </View>
                 </View>
             </Modal>
-        </>
+        </View>
     );
 
 };

@@ -148,7 +148,7 @@ const Treinos = () => {
     }, []);
 
     return (
-        <>
+        <View style={{margin: 20}}>
             <Header>
             </Header>
 
@@ -248,7 +248,7 @@ const Treinos = () => {
 
             <BottomNavigation currentBottomNavigationTabIndex={2} />
 
-        </>
+        </View>
     );
 
 };
