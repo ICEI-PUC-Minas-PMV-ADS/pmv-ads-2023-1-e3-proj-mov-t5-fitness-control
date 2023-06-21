@@ -143,7 +143,7 @@ const Dieta = () => {
 
 
     return (
-        <>
+        <View style={{margin: 20}}>
             <Header>
             </Header>
 
@@ -246,7 +246,7 @@ const Dieta = () => {
             </Body>
 
             <BottomNavigation currentBottomNavigationTabIndex={1} />
-        </>
+        </View>
     );
 };
 

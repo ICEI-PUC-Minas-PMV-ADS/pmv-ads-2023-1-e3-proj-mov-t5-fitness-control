@@ -66,7 +66,7 @@ const Usuario = () => {
     };
 
     return (
-        <>
+        <View style={{margin: 20}}>
             <Header>
             </Header>
 
@@ -95,7 +95,7 @@ const Usuario = () => {
            
             <BottomNavigation currentBottomNavigationTabIndex={5} />
 
-        </>
+        </View>
     );
 
 };
