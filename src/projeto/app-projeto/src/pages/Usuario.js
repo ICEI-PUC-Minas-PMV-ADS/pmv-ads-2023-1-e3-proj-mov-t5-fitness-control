@@ -81,7 +81,7 @@ const Usuario = () => {
                 <TextInput
                     value={email}
                     onChangeText={(text) => setEmail(text)}
-                    placeholder="Nome"
+                    placeholder="Email"
                     editable={editing}
                 >
                 </TextInput>
