@@ -1,10 +1,11 @@
-import * as React from 'react'
-import * as RN from 'react-native'
+import React, { Component } from 'react';
+import { View, Text, Button, StyleSheet } from 'react-native';
+import * as CalendarTable from '../services/CalendarioDB.service';
 
-class MyCalendar extends React.Component {
+class MyCalendar extends Component {
     months = [
         'Janeiro',
-        'Fevereiro ',
+        'Fevereiro',
         'Março',
         'Abril',
         'Maio',
@@ -15,117 +16,137 @@ class MyCalendar extends React.Component {
         'Outubro',
         'Novembro',
         'Dezembro',
-    ]
+    ];
 
-    weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab']
+    weekDays = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
 
-    nDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+    nDays = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
     state = {
         activeDate: new Date(),
+        checks: [],
+    };
+
+    componentDidMount() {
+        this.getUserChecks();
     }
 
     _onPress = (item) => {
-        this.setState(() => {
-            if (!item.match && item != -1) {
-                this.state.activeDate.setDate(item)
-                return this.state
+        this.setState((prevState) => {
+            if (!item.match && item !== -1) {
+                prevState.activeDate.setDate(item);
+                return prevState;
             }
-        })
-    }
+        });
+    };
 
     changeMonth = (n) => {
-        this.setState(() => {
-            this.state.activeDate.setMonth(this.state.activeDate.getMonth() + n)
-            return this.state
-        })
-    }
+        this.setState((prevState) => {
+            const { activeDate } = prevState;
+            activeDate.setMonth(activeDate.getMonth() + n);
+            return { activeDate };
+        });
+    };
 
     generateMatrix() {
-        let matrix = []
-        matrix[0] = this.weekDays
-        let year = this.state.activeDate.getFullYear()
-        let month = this.state.activeDate.getMonth()
-        let firstDay = new Date(year, month, 1).getDay()
-
-        let maxDays = this.nDays[month]
-        if (month == 1 && ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)) {
-            maxDays += 1
+        const matrix = [];
+        matrix[0] = this.weekDays;
+        const year = this.state.activeDate.getFullYear();
+        const month = this.state.activeDate.getMonth();
+        const firstDay = new Date(year, month, 1).getDay();
+        let maxDays = this.nDays[month];
+        if (month === 1 && ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)) {
+            maxDays += 1;
         }
 
-        let counter = 1
+        let counter = 1;
         for (let row = 1; row < 7; row++) {
-            matrix[row] = []
+            matrix[row] = [];
             for (let col = 0; col < 7; col++) {
-                matrix[row][col] = -1
-                if (row == 1 && col >= firstDay) {
-                    matrix[row][col] = counter++
+                matrix[row][col] = -1;
+                if (row === 1 && col >= firstDay) {
+                    matrix[row][col] = counter++;
                 } else if (row > 1 && counter <= maxDays) {
-                    matrix[row][col] = counter++
+                    matrix[row][col] = counter++;
                 }
             }
         }
-        return matrix
+        return matrix;
+
     }
 
+    getUserChecks = async () => {
+        const date = new Date().toISOString().split('T')[0];
+        const checks = await CalendarTable.getDataCalendario(date);
+        this.setState({ checks });
+    };
+
     render() {
-        let matrix = this.generateMatrix()
-        let rows = []
-        rows = matrix.map((row, rowIndex) => {
-            let rowItems = row.map((item, colIndex) => {
+        const matrix = this.generateMatrix();
+        const { activeDate, checks } = this.state;
+
+        const rows = matrix.map((row, rowIndex) => {
+            const rowItems = row.map((item, colIndex) => {
                 return (
-                    <RN.Text
+                    <Text
                         style={{
                             flex: 1,
                             height: 18,
                             textAlign: 'center',
-                            backgroundColor: rowIndex == 0 ? '#aba9a9' : '#fff',
-                            color: colIndex == 0 ? '#a00' : '#000',
-                            fontWeight: item == this.state.activeDate.getDate() ? 'bold' : '',
+                            backgroundColor: rowIndex === 0 ? '#aba9a9' : '#fff',
+                            color: colIndex === 0 ? '#a00' : '#000',
+                            fontWeight: item === activeDate.getDate() ? 'bold' : '',
                         }}
-                        onPress={() => this._onPress(item)}>
-                        {item != -1 ? item : ''}
-                    </RN.Text>
-                )
-            })
+                        onPress={() => this._onPress(item)}
+                        key={`${rowIndex}-${colIndex}`}
+                    >
+                        {item !== -1 ? item : ''}
+                    </Text>
+                );
+            });
             return (
-                <RN.View
+                <View
                     style={{
                         flex: 1,
                         flexDirection: 'row',
                         justifyContent: 'space-around',
                         alignItems: 'center',
-                    }}>
+                    }}
+                    key={rowIndex}
+                >
                     {rowItems}
-                </RN.View>
-            )
-        })
+                </View>
+            );
+        });
+
         return (
-            <RN.View>
-                <RN.Text
+            <View>
+                <Text
                     style={{
                         fontWeight: 'bold',
                         fontSize: 18,
                         textAlign: 'center',
-                    }}>
-                    {this.months[this.state.activeDate.getMonth()]} &nbsp;
-                    {this.state.activeDate.getFullYear()}
-                </RN.Text>
+                    }}
+                >
+                    {this.months[activeDate.getMonth()]} &nbsp;
+                    {activeDate.getFullYear()}
+                </Text>
                 {rows}
-                <RN.View style={styles.buttonContainer}>
-                    <RN.Button title="Voltar" onPress={() => this.changeMonth(-1)} />
-                    <RN.Button title="Avançar" onPress={() => this.changeMonth(+1)} />
-                </RN.View>
-            </RN.View>
-        )
+                <View style={styles.buttonContainer}>
+                    <Button title="Voltar" onPress={() => this.changeMonth(-1)} />
+                    <Button title="Avançar" onPress={() => this.changeMonth(1)} />
+                </View>
+            </View>
+        );
     }
 }
-const styles = RN.StyleSheet.create({
+
+const styles = StyleSheet.create({
     buttonContainer: {
         flexDirection: 'row',
         justifyContent: 'space-around',
         marginTop: 16,
     },
-})
+});
 
-export default MyCalendar
+export default MyCalendar;

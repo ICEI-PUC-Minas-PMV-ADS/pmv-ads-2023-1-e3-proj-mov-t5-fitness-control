@@ -2,10 +2,10 @@ import Database from './Banco.service.js'
 
 const DB_EXEC = Database.getConnection();
 
-export const getDataCalendario = async (params) => {
+export const getDataCalendario = async (data) => {
 
     let results = await DB_EXEC(`
-        SELECT * FROM calendario WHERE data = '${params.data}'
+        SELECT * FROM calendario WHERE data = '${data}'
     `);
 
     return results.rows && results.rows.length ? results.rows[0] : null;

@@ -11,7 +11,7 @@ import ListScreen from '../components/ListScreen.js';
 const Calendario = () => {
 
     return (
-        <View style={{margin: 20}}>
+        <>
             <Header>
             </Header>
 
@@ -22,7 +22,7 @@ const Calendario = () => {
 
             <BottomNavigation currentBottomNavigationTabIndex={4} />
 
-        </View>
+        </>
     );
 };
 
