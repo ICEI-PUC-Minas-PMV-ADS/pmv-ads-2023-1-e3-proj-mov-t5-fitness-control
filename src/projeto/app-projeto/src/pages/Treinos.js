@@ -10,6 +10,7 @@ import * as TreinoDB from '../services/TreinoDB.service.js';
 import DropdownWeekDay from '../components/DropdownWeekDay.js';
 
 
+
 const Treinos = () => {
     const [editandoTreino, setEditandoTreino] = useState(false);
 
@@ -148,7 +149,7 @@ const Treinos = () => {
     }, []);
 
     return (
-        <View style={{margin: 20}}>
+        <>
             <Header>
             </Header>
 
@@ -162,9 +163,11 @@ const Treinos = () => {
                                 <Text style={styles.titulo}>Adicionando Treino</Text>
                             }
                         </View>
-
+                        
                         <View style={styles.lista}>
+                        <View style={styles.dropdownContainer}>
                             <DropdownWeekDay diaSemanaSelecionada={diaSemana} onChange={handleDayChange} />
+                        </View>
 
                             <TextInput
                                 style={styles.input}
@@ -189,6 +192,7 @@ const Treinos = () => {
                                 value={ordem}
                                 onChangeText={(texto) => setOrdem(texto)}
                             />
+                            
 
                             <View style={styles.botoesSalvar}>
                                 {infosTreino ?
@@ -201,12 +205,13 @@ const Treinos = () => {
                                     </TouchableOpacity>
                                 }
                             </View>
-
+                            
                             <View style={styles.botoesVoltar}>
                                 <TouchableOpacity style={styles.botaoVoltar}>
                                     <Text style={styles.textoBotaoVoltar} onPress={fecharEdicao}>Voltar</Text>
                                 </TouchableOpacity>
                             </View>
+                            
                         </View>
                     </View>
                     :
@@ -248,7 +253,7 @@ const Treinos = () => {
 
             <BottomNavigation currentBottomNavigationTabIndex={2} />
 
-        </View>
+        </>
     );
 
 };
@@ -256,13 +261,15 @@ const Treinos = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        padding: 5,
+        paddingVertical: 20,
     },
     header: {
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
         marginBottom: 20,
+        position: 'relative',
+        marginTop: 10,
     },
     titulo: {
         fontSize: 24,
@@ -282,7 +289,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: '0.2rem'
+        borderRadius: '0.2rem',
+        marginTop:20,
     },
     textoBotaoAdicionar: {
         color: 'white',
@@ -300,7 +308,8 @@ const styles = StyleSheet.create({
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        borderRadius: '0.2rem'
+        borderRadius: '0.2rem',
+        marginTop: 20,
     },
     textoBotaoSalvar: {
         color: '#ffffff',
@@ -335,7 +344,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         marginBottom: 10,
         paddingTop: '1rem',
-        paddingStart: '0.5rem',
+        paddingStart: '2rem',
         paddingBottom: '1rem',
         paddingEnd: '1rem',
         backgroundColor: '#F8E5E5',
@@ -359,7 +368,14 @@ const styles = StyleSheet.create({
         display: 'flex',
         height: '100%',
         justifyContent: 'space-between'
-    }
+    },    
+    dropdownContainer: {
+        //position: 'absolute',
+        display: 'flex',
+        top: 0,
+        left: 0,                    
+        zIndex: 2,
+    },
 });
 
 export default Treinos;

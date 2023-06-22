@@ -51,7 +51,7 @@ const Home = () => {
     }
 
     return (
-        <View style={{margin: 20}}>
+        <>
             <Header>
             </Header>
 
@@ -60,7 +60,7 @@ const Home = () => {
                     {(new Date()).toLocaleDateString('pt-BR', { weekday: 'long' }).split('-')[0]}
                 </View>
                 <View style={styles.diaAtual}>
-                    {(new Date()).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }).split('/').reverse().join('/')}
+                    {(new Date()).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit' }).split('/').join('/')}
                 </View>
 
                 <View style={styles.tarefas}>
@@ -126,7 +126,7 @@ const Home = () => {
             </Body>
 
             <BottomNavigation currentBottomNavigationTabIndex={3} />
-        </View>
+        </>
     );
 
 };

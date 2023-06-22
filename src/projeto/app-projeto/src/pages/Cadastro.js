@@ -72,7 +72,7 @@ const Cadastro = () => {
 
 
     return (
-        <View style={{margin: 20}}>
+        <View style={{ marginTop: 250}}>
             <Text style={styles.titulo}>
                 CADASTRO
             </Text>

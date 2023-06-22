@@ -61,14 +61,14 @@ const Login = () => {
     }
 
     return (
-        <View style={{margin: 20}}>
+        <View style={{marginTop: 250}}>
             <Text style={styles.titulo}>
                 FITNESS CONTROL
             </Text>
 
             <View style={styles.inputArea}>
                 <TextInput
-                    style={styles.input}
+                    style={styles.inputEmail}
                     placeholder="Email"
                     keyboardType="string"
                     value={login}
@@ -78,7 +78,7 @@ const Login = () => {
 
             <View style={styles.inputArea}>
                 <TextInput
-                    style={styles.input}
+                    style={styles.inputSenha}
                     placeholder="Senha"
                     placeholderTextColor="#000000"
                     value={senha}
@@ -124,10 +124,19 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         fontWeight: 'bold',
     },
-    input: {
+    inputEmail: {
         fontSize: 18,
         color: '#000000',
         width: '100%',
+        height: 40,
+        marginVertical: 12,
+        borderWidth: 1,
+        padding: 10,
+    },
+    inputSenha: {
+        fontSize: 18,
+        color: '#000000',
+        width: '85%',
         height: 40,
         marginVertical: 12,
         borderWidth: 1,

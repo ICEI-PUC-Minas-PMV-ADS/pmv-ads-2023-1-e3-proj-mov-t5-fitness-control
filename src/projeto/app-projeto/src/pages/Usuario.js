@@ -5,7 +5,7 @@ import Body from '../components/Body.js';
 import { Text, TextInput } from 'react-native-paper';
 import * as UsuariosDB from '../services/UsuariosDB.service.js';
 import * as UsuarioService from '../services/Usuario.service.js';
-import { Button,TouchableOpacity } from 'react-native';
+import { Button, TouchableOpacity, View } from 'react-native';
 
 
 const Usuario = () => {
@@ -66,7 +66,7 @@ const Usuario = () => {
     };
 
     return (
-        <View style={{margin: 20}}>
+        <>
             <Header>
             </Header>
 
@@ -95,7 +95,7 @@ const Usuario = () => {
            
             <BottomNavigation currentBottomNavigationTabIndex={5} />
 
-        </View>
+        </>
     );
 
 };
