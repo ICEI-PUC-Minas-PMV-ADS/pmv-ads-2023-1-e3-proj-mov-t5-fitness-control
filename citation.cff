@@ -1,0 +1,22 @@
+message: Please cite this software using these metadata.
+title: Fitness Control
+authors:
+  - family-names: de Oliveira Costa
+    given-names: Guilherme 
+  - family-names: Puddo Cardoso
+    given-names: Gabriel José
+  - family-names: Lessa Henrique
+    given-names: João Victor
+  - family-names: Pereira Marques
+    given-names: Carlos Eduardo 
+  - name-suffix: Professor
+    affiliation: PUC Minas
+    family-names: Silva Caldeira Rocha
+    given-names: Diego 
+keywords:
+  - Saúde
+  - Dieta
+  - Fitness
+repository-code: https://github.com/ICEI-PUC-Minas-PMV-ADS/pmv-ads-2023-1-e3-proj-mov-t5-fitness-control
+version: 1.0.0
+date-released: 2023-06-23
